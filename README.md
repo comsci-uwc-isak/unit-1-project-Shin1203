@@ -29,6 +29,10 @@ Requirements requested of program
 -comandd to see total statistics
 -User skill independant
 -Data should be safely backed up, all trip data should go under specific car
+-------------
+First sketch diagram of system
+![SystemDiagrama]
+
 
 Design
 ---------
