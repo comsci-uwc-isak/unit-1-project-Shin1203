@@ -31,7 +31,7 @@ Requirements requested of program
 -Data should be safely backed up, all trip data should go under specific car
 -------------
 First sketch diagram of system
-![Screenshot (86)]
+![Screenshot (86).png]
 
 
 Design
