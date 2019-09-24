@@ -30,12 +30,12 @@ Requirements requested of program
 -User skill independant
 -Data should be safely backed up, all trip data should go under specific car
 -------------
-First sketch diagram of system
-![Screenshot (86).png]
 
 
 Design
 ---------
+###First sketch diagram of system
+![FirstDiagram](screenshot (86).png)
 
 Development
 --------
