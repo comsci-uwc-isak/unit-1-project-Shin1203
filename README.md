@@ -35,7 +35,7 @@ Requirements requested of program
 Design
 ---------
 ###First sketch diagram of system
-![FirstDiagram](screenshot (86).png)
+![FirstDiagram](Screenshot (86).png)
 
 Development
 --------
