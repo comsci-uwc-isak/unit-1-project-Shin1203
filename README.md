@@ -41,6 +41,7 @@ Design
 Development
 --------
 ###First install program
+```sh
 #!/bin/bash
 #minimal Car rental app
 
@@ -77,7 +78,7 @@ if [ $choice == "N" ]; then
 	cd ~/Desktop
 	rm -r RentalCarApp
 fi
-
+```
 
 Evaluation
 -----------
