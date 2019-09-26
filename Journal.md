@@ -14,3 +14,6 @@ homework is- 1.1.1 planning on car  rental rpoject
 Todady we worked on making a system diagram, andd an installation script
 Questions I have:
 What I learnt: how to make a simple install application where user enters location
+
+10/2/2019
+we shared our solutions for each of the problems, and added problem planning to github
