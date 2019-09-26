@@ -29,6 +29,18 @@ Requirements requested of program
 -comandd to see total statistics
 -User skill independant
 -Data should be safely backed up, all trip data should go under specific car
+
+
+
+Create a car
+"$create plate model color pseats"
+-Get inputs with argument
+-Check number of arguments, if 4 then continue, if not exit "message"
+`if [ $# -eq 4 ]`
+-write to mainfile with one extra line, not erasing other entries
+-create car trip file with license plate.txt
+
+
 -------------
 
 
