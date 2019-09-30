@@ -40,6 +40,10 @@ Create a car
 -write to mainfile with one extra line, not erasing other entries
 -create car trip file with license plate.txt
 
+Record
+-Check arguments (plate, km , dateout, date in)
+-Check that the car exists
+
 
 -------------
 
