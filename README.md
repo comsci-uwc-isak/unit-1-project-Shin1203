@@ -43,7 +43,7 @@ Create a car
 Record
 -Check arguments (plate, km , dateout, date in)
 -Check that the car exists
-
+-If the car exists, writ ethe trip info in the $plate.txt file, without erasing previous trips.
 
 -------------
 
