@@ -30,7 +30,19 @@ Requirements requested of program
 -User skill independant
 -Data should be safely backed up, all trip data should go under specific car
 
+### Success Criteria
+These are the measurable outcomes
+1. A car can be created and stored in database
+2. A car's information can be edited
+3. A car can be deleted from the database
+4. The installation is ***Simple=> one step process***
+5. Trips can be recorded and stored for an existing car
+6. A basic database system is implemented
+7. A basic backup functionality
 
+
+### Proposed solution
+I decided on choosing bash as the best program for the solution. This is because the user doesn't want a complicated system, and wants a terminal based program. The use of a computer program to store data will make the data more accessible, safe and easy to input in comparison to the old hand-written system. Some problems with the program is that it is very simple, and the user interface may be confusing due to it being in the terminal, as well as some limitations in functionality. I believe still that a bash program is the best solution, as it provides a simple solution that should not be too complicated to use.
 
 Create a car
 "$create plate model color pseats"
@@ -44,6 +56,11 @@ Record
 -Check arguments (plate, km , dateout, date in)
 -Check that the car exists
 -If the car exists, writ ethe trip info in the $plate.txt file, without erasing previous trips.
+
+Summary
+-Check the car file for all files
+-Print out the name of each file, 
+-Under the name of each file, print out the contents of the file
 
 -------------
 
