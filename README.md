@@ -124,3 +124,9 @@ cd../
 This is necessaary becaus ethe `creeate.sh` resides in the main folder wheras the test filee is inside the /tests folders.
 
 To check that the car was created in the main file (maincarfile.txt), the folllowing command is used `LastLine=$( tail -n 1 ../car/maincarfile.txt)`.
+
+**Summary:**
+What type of testing did we do today?
+We did dydnamic testing, running testCreate to sese if the create command works
+It was Alpha testing, as we the developers tested the software, not an end-game user.
+It is also white-box testing, as we know the inside of the code and how everything works.
