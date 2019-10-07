@@ -116,5 +116,10 @@ fi
 Evaluation
 -----------
 
-
+Test 1;
+First run of the program we hadd one issue: the test file needed to move to the main folder
+``` .sh
+cd../
+```
+This is necessaary becaus ethe `creeate.sh` resides in the main folder wheras the test filee is inside the /tests folders.
 
