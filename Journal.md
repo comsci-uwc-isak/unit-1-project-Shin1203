@@ -18,3 +18,6 @@ What I learnt: how to make a simple install application where user enters locati
 10/2/2019
 we shared our solutions for each of the problems, and added problem planning to github
 I made the summary.sh app, which lists all the cars in the folder, and below it lists the informaation of the car.
+
+10/7/2019
+Today we tested our createcar.sh command by making a testing foler, and in it the file testCreate, running testCreate will go through createcar.sh and check if it works properly. 
