@@ -123,3 +123,4 @@ cd../
 ```
 This is necessaary becaus ethe `creeate.sh` resides in the main folder wheras the test filee is inside the /tests folders.
 
+To check that the car was created in the main file (maincarfile.txt), the folllowing command is used `LastLine = $( tail -n 1 Database/maincarfile.txt)`.
