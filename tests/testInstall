@@ -1,0 +1,12 @@
+#!/bin/bash
+#this program tests if install.sh works
+bash ../install.sh
+
+#checking for presence of car rental app
+if [ -f "~/Desktop/RentalCarApp" ]; then
+	echo "Test one: RentalCarApp present, success"
+else
+	echo "Test two: RentalCarApp not present, failure"
+fi
+ 
+ 

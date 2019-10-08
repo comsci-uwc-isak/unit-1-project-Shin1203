@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#This file tests if the delete criterion is met
+
+#Step 1: delete car created from testCreate file
+bash ../deletecar.sh TXM301
+
+#step 2: check that the license file .txt was created
+if [ -f "../car/TXM301.txt" ]; then
+	echo "Test one: TXM301.txt still present: failed"
+else
+	echo "Test one: TXM301.txt succesfully deleted"
+fi
+ 
+#step 3 : Check that the car was deleted off the maincarfile
+
+lastline=$( tail -n 1 ../car/maincarfile.txt )
+
+if [ "TXM301 nissan red 9" == "$lastline" ]; then
+	echo "Test two: record wasn't deleted, faileed"
+else
+	echo "Test two: records succesfully deleteds"
+fi

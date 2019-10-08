@@ -7,7 +7,7 @@
 bash ../createcar.sh TXM301 nissan red 9
 
 #step 2: check that the license file .txt was created
-if [ -f "../car/TXN301.txt" ]; then
+if [ -f "../car/TXM301.txt" ]; then
 	echo "Test one: a txt file was created inside the database: passedD"
 else
 	echo "Test one: Error. File not found: not passed"
@@ -17,7 +17,7 @@ fi
 
 lastline=$( tail -n 1 ../car/maincarfile.txt )
 
-if [ "tXM301 nissan red 9" == "$lastline" ]; then
+if [ "TXM301 nissan red 9" == "$lastline" ]; then
 	echo "Test two: record wasa entered correctly: passed"
 else
 	echo "Test two: Failed"
