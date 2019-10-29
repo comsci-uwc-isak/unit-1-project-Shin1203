@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cd ~/Desktop/CarRentalApp/car
+cd ~/Desktop/CarRentalApp/db
 #lists all file names before
 echo "you have " * " in current folder"
 echo " "
