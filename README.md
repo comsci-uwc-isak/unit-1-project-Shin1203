@@ -283,17 +283,56 @@ do
         echo -n " "
 
 ```   
+
+### TESTS
+Testing mostly consists of using an if command to check if a file has been created or destroyed
+
+if [ -f ..... ] ; 
+will be triggered if a file isnt found
+
+for testCreate, the program will run createcar.sh then check if the specific entered files have been created in database,
+if the file is found, a success message is printed, if not an error. The code ewill also check for the correct information in files
+
+The opposite applies for testDelete, where it will send a success message in case the file isnt found.
+
+TestInstall functions similarily to testCreate, instead it looks into desktop and searches for CarRentalApp.
+
 Evaluation
 -----------
 
-Test 1;
-First run of the program we hadd one issue: the test file needed to move to the main folder
-``` .sh
-cd../
-```
-This is necessaary becaus ethe `creeate.sh` resides in the main folder wheras the test filee is inside the /tests folders.
+#Issues and solutions
 
-To check that the car was created in the main file (maincarfile.txt), the folllowing command is used `LastLine=$( tail -n 1 ../car/maincarfile.txt)`.
+### Frame
+-The code for frame was especially hard, as we had to figure out how to space a message evenly between parameters of "*"s.
+-I wrote the code so that the spacing between the words and *'s would be calculated by subtracting the length of the word from the entire space (100 space long), then dividing that number by 2. By doing this you can calculate the space from each end of the word to the star. For example, if a word is 4 letters long, (100-4)/2=48, 48 spaces from the left side of the letter, 48 spaces from the right side of the letter is where the stars will be placed. The problem here is that bash can't comprehend decimals, so if the length of the letter was an odd number, the stars would be missaligned by 1 space, as the program will round down (e.g. 5 letters long, will result in 47 spaces both ways, which menas total space taken will amount to 99, not the intended 100. To fix this problem, I wrote code to detect when the line was at 99 length, then manually add a space to get it to 100. The code is as below
+
+``` 
+len=${#word}
+(( spacing=(100-$len)/2 ))
+
+echo -n "*"
+for (( i=1; i<$spacing; i++))
+do
+        echo -n " "
+done
+echo -n $word
+
+
+
+#to create equal spacing between message, variable spsacing is used, which subtracts total >
+#To combat unequal space with odd numbers (no decimals in bash), we define oddd numbers wit>
+for (( i=( 100-$spacing ); i<99; i++))
+do
+        echo -n " "
+done
+
+(( odd=($spacing+$spacing+$len) ))
+if [ $odd -eq 99 ]; then
+echo -n " "
+fi
+echo -n "*"
+```
+
 
 **Summary:**
 What type of testing did we do today?
