@@ -118,6 +118,13 @@ if [ $choice == "Y" ]; then
 fi
 ```
 
+### backup.sh
+```
+#!/bin/bash
+echo "creating backup of data to desktop"
+cp -r ~/Desktop/CarRentalApp/db ~/Desktop
+```
+
 ### create.sh code
 ```
 #!/bin/bash
@@ -299,7 +306,7 @@ TestInstall functions similarily to testCreate, instead it looks into desktop an
 
 To test the rest of the code, I ran them and made sure they worked as intended, making fixes along the way- common problems included directory location, and figuring out how to maneuver files to the right place, other common mistakes where in naming, syntax, and logistical problems such as taking wrong approaches to solutions.
 Evaluation
------------
+
 
 Issues and solutions
 ----
@@ -345,6 +352,31 @@ Throuogh making this app, I have become proficient in using arguments, for loops
 
 Evaluation
 ----
+** Evidence for Success criteria
+All scripts have been tested and work, checklist as follows
+1. A car can be created and stored in database ---------createcar.sh
+2. A car's information can be edited--------------------edit.sh
+3. A car can be deleted from the database---------------deletecar.sh
+4. The installation is ***Simple=> one step process***--install.sh
+5. The uninstallation is also ***Simple-----------------uninstall.sh
+6. Trips can be recorded and stored for an existing car--record.sh
+7. A basic database system is implemented----------------summary.sh, (organization in edit, create is organized in "db" file)
+8. A basic backup functionality--------------------------backup.sh
+
+The usage of this app is also very simple, code will only take simple inputs to run, and is a quick process.
+
+
+** Improvements for future
+-Similar to the "frame" code, we could have added more in terms of design/aesthetic to make the code look more pleasing, also the summary.sh program can look alittle disorganized, perhaps license plates should be organized in alphabetical order instead of date entered into program.
+-Online backup system??
+-Perhaps more user control of the code, that is still simple for the user to use.
+-IF user doesn't follow the EXACT syntax or process for code, the code won't work, and that may become confusing
+-My summary code doesn't create averages or data out of the information in the database files.
+-Some of my code could be improved to increase effectiveness.
+
+
+
+
 
 
 
