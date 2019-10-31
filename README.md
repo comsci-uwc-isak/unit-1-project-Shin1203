@@ -297,11 +297,12 @@ The opposite applies for testDelete, where it will send a success message in cas
 
 TestInstall functions similarily to testCreate, instead it looks into desktop and searches for CarRentalApp.
 
+To test the rest of the code, I ran them and made sure they worked as intended, making fixes along the way- common problems included directory location, and figuring out how to maneuver files to the right place, other common mistakes where in naming, syntax, and logistical problems such as taking wrong approaches to solutions.
 Evaluation
 -----------
 
-#Issues and solutions
-
+Issues and solutions
+----
 ### Frame
 -The code for frame was especially hard, as we had to figure out how to space a message evenly between parameters of "*"s.
 -I wrote the code so that the spacing between the words and *'s would be calculated by subtracting the length of the word from the entire space (100 space long), then dividing that number by 2. By doing this you can calculate the space from each end of the word to the star. For example, if a word is 4 letters long, (100-4)/2=48, 48 spaces from the left side of the letter, 48 spaces from the right side of the letter is where the stars will be placed. The problem here is that bash can't comprehend decimals, so if the length of the letter was an odd number, the stars would be missaligned by 1 space, as the program will round down (e.g. 5 letters long, will result in 47 spaces both ways, which menas total space taken will amount to 99, not the intended 100. To fix this problem, I wrote code to detect when the line was at 99 length, then manually add a space to get it to 100. The code is as below
@@ -333,9 +334,34 @@ fi
 echo -n "*"
 ```
 
+### Creating named files, Adding specific text into files, using arguments
+-I learned how to use arguments to create files, as well as add arguments
+-Took me a while to figure out how to read user arguments ($1, $2, $3, $4)
+-creating files- echo " " > ~locationforfile/"$1.txt"
+-adding info to files- echo "...." >> ~locationforfile/"$1.txt"
 
-**Summary:**
-What type of testing did we do today?
-We did dydnamic testing, running testCreate to sese if the create command works
-It was Alpha testing, as we the developers tested the software, not an end-game user.
-It is also white-box testing, as we know the inside of the code and how everything works.
+Throuogh making this app, I have become proficient in using arguments, for loops as well as creating/making/editing files and  maneuvering locations in the desktop through the terminal, as well as becoming very familiar with using bash
+
+
+Evaluation
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
