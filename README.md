@@ -220,8 +220,69 @@ else
         echo "Not enough information"
 fi
 ```   
-   
-   
+### frame code (Used as "image" for messages)
+```
+  GNU nano 4.3                               frame
+#!/bin/bash
+
+echo "enter"
+
+#this code reads argument, which is bash frame *argument
+word=$1
+
+
+for (( i=0; i<100; i++ ))
+do
+echo -n "*"
+done
+echo " "
+
+
+
+echo -n "*"
+
+# first line, straight line
+
+for (( i=1; i<99; i++ ))
+do
+        echo -n " "
+done
+echo -n "*"
+echo " "
+
+len=${#word}
+(( spacing=(100-$len)/2 ))
+
+echo -n "*"
+for (( i=1; i<$spacing; i++))
+do
+        echo -n " "
+done
+echo -n $word
+
+
+
+#to create equal spacing between message, variable spsacing is used, which subtracts total >
+#To combat unequal space with odd numbers (no decimals in bash), we define oddd numbers wit>
+for (( i=( 100-$spacing ); i<99; i++))
+do
+        echo -n " "
+done
+
+(( odd=($spacing+$spacing+$len) ))
+if [ $odd -eq 99 ]; then
+echo -n " "
+fi
+echo -n "*"
+
+
+echo " "
+echo -n "*"
+for (( i=1; i<99; i++ ))
+do
+        echo -n " "
+
+```   
 Evaluation
 -----------
 
