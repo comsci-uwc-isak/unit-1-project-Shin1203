@@ -98,10 +98,9 @@ echo "copying files to folder"
 echo "Installation complete"
 ```
 
-### Uninstall.sh code
-
+### uninstall.sh code
 ```
-
+#!/bin/bash
 #uninstall option
 
 echo "Would you like to uninstall the app?"
@@ -118,6 +117,111 @@ if [ $choice == "Y" ]; then
         rm -r CarRentalApp
 fi
 ```
+
+### create.sh code
+```
+#!/bin/bash
+
+#reading arguments, making sure there are 4
+if [ $# -eq 4 ]; then
+        #access car storage, make txt file with info
+        echo "$1 $2 $3 $4" >> ~/Desktop/CarRentalApp/db/maincarfile.txt
+        echo " " > ~/Desktop/CarRentalApp/db/"$1.txt"
+        bash ~/Desktop/CarRentalApp/scripts/frame "Car created successfully"
+else
+        #exit messaage
+        echo "not enough info, exiting"
+
+fi
+```
+
+### deletecar.sh code
+```
+#!/bin/bash
+#reading arguments, making sure there are 4
+if [ $# -eq 1 ]; then
+        #access maincarfile.txt, delete line that includes argument
+        sed -i "/$1/d" ~/Desktop/CarRentalApp/db/maincarfile.txt
+        #remove car file
+        rm -r ~/Desktop/CarRentalApp/db/"$1".txt
+        "Deletedd succesfully"
+else
+        #exit messaage
+        echo "please enter liscence plate of car"
+fi
+```
+    
+### edit.sh code
+```
+#!/bin/bash
+#This program edit the information of an exiting car in the
+#maincarfile
+#user enters [license place] [model] [red] [pp]
+
+if [ $# -ne 4 ]; then
+  echo "Error with the number of arguments"
+  echo "Enter License Maker Model Passengers"
+  exit
+fi
+
+license=$1
+maker=$2
+model=$3
+pp=$4
+
+cd ../db
+
+if [ ! -f "$license.txt" ]; then
+  echo "File not found!"
+fi
+
+#find the line with the given car plate and delete it
+sed -i '' "/^$license/d" maincarfile.txt
+#add the new information
+echo "$license $maker $model $pp" >> maincarfile.txt
+cd ../scripts
+bash frame "Car edited successfully"    
+``` 
+    
+### summary.sh code    
+```    
+#!/bin/bash
+
+cd ~/Desktop/CarRentalApp/db
+#lists all file names before
+echo "you have " * " in current folder"
+echo " "
+
+#this loop will print filename and below that contents.
+for f in *.txt; do
+echo "filename-" $f
+cat $f
+done
+
+```
+### record.sh code
+
+```
+ #!bin/bash
+cd ~/Desktop/CarRentalApp/db
+
+#Checks for 4 arguments, then if file exists or not
+if [ $# -eq 4 ]; then
+        if  [ ! -f "$1.txt" ]; then
+                echo "file does not exist"
+                exit
+        fi
+        #adds arguments as info into specified folder(found by license plate)
+        echo "$1, $2, $3, $4" >> ~/Desktop/CarRentalApp/db/"$1.txt"
+        echo "information stored"
+
+
+else
+        echo "Not enough information"
+fi
+```   
+   
+   
 Evaluation
 -----------
 
