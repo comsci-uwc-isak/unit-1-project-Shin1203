@@ -52,10 +52,12 @@ I decided on choosing bash as the best program for the solution. This is because
 -write to mainfile with one extra line, not erasing other entries
 -create car trip file with license plate.txt!
 ![Createflowchart](Flowchart.pdf)
+
 ### Record
 -Check arguments (plate, km , dateout, date in)
 -Check that the car exists
 -If the car exists, writ ethe trip info in the $plate.txt file, without erasing previous trips.
+![Recordflowchart](Flowchart(1).pdf)
 
 ### Summary
 -Check the car file for all files --- 
@@ -68,7 +70,7 @@ I decided on choosing bash as the best program for the solution. This is because
 -Use "cp" command to copy contents of CarRentalApp (db, scripts, tests)
 -cp copies all folders to the "CarRentalApp" in desktop
 -Install complete, alert user
-
+![installflowchart](Flowchart(2).pdf)
 
 
 -------------
