@@ -102,16 +102,21 @@ echo "Installation complete"
 
 ```
 
+#uninstall option
 
+echo "Would you like to uninstall the app?"
+echo "Y for yes, N for no."
+read choice
 
+if [ $choice == "N" ]; then
+        echo "Canceling uninstall"
+fi
 
-
-
-
-
-
-
-
+if [ $choice == "Y" ]; then
+        echo "Deleting program"
+        cd ~/Desktop
+        rm -r CarRentalApp
+fi
 ```
 Evaluation
 -----------
