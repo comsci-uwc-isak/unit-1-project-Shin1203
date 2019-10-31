@@ -50,8 +50,8 @@ I decided on choosing bash as the best program for the solution. This is because
 -Check number of arguments, if 4 then continue, if not exit "message"
 `if [ $# -eq 4 ]`
 -write to mainfile with one extra line, not erasing other entries
--create car trip file with license plate.txt
-
+-create car trip file with license plate.txt!
+![Createflowchart](Flowchart.pdf)
 ### Record
 -Check arguments (plate, km , dateout, date in)
 -Check that the car exists
