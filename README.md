@@ -14,7 +14,7 @@ Contents
 
 Planning
 ----------
-** Defining the problem (topic 1.1.1) **
+** Defining the problem (topic 1.1.1)
 100-150 words explaining context of problem
 A system change has to happen from handwritten records to a computer system that keeps track of car rentals
 Potential problem with old system- handwritten
@@ -36,15 +36,15 @@ These are the measurable outcomes
 2. A car's information can be edited
 3. A car can be deleted from the database
 4. The installation is ***Simple=> one step process***
-5. Trips can be recorded and stored for an existing car
-6. A basic database system is implemented
-7. A basic backup functionality
-
+5. The uninstallation is also ***Simple
+6. Trips can be recorded and stored for an existing car
+7. A basic database system is implemented
+8. A basic backup functionality
 
 ### Proposed solution
 I decided on choosing bash as the best program for the solution. This is because the user doesn't want a complicated system, and wants a terminal based program. The use of a computer program to store data will make the data more accessible, safe and easy to input in comparison to the old hand-written system. Some problems with the program is that it is very simple, and the user interface may be confusing due to it being in the terminal, as well as some limitations in functionality. I believe still that a bash program is the best solution, as it provides a simple solution that should not be too complicated to use.
 
-Create a car
+### Create a car
 "$create plate model color pseats"
 -Get inputs with argument
 -Check number of arguments, if 4 then continue, if not exit "message"
@@ -52,15 +52,24 @@ Create a car
 -write to mainfile with one extra line, not erasing other entries
 -create car trip file with license plate.txt
 
-Record
+### Record
 -Check arguments (plate, km , dateout, date in)
 -Check that the car exists
 -If the car exists, writ ethe trip info in the $plate.txt file, without erasing previous trips.
 
-Summary
--Check the car file for all files
--Print out the name of each file, 
--Under the name of each file, print out the contents of the file
+### Summary
+-Check the car file for all files --- 
+-Print out the name of each file, ---
+-Under the name of each file, print out the contents of the file --- cat,
+
+### Install
+-Use mkdir to make "CarRentalApp"
+-Go into USB with the "CarRentalApp"
+-Use "cp" command to copy contents of CarRentalApp (db, scripts, tests)
+-cp copies all folders to the "CarRentalApp" in desktop
+-Install complete, alert user
+
+
 
 -------------
 
@@ -73,46 +82,37 @@ Design
 
 Development
 --------
-###First install program
+### Install.sh code
 ```sh
 #!/bin/bash
-#minimal Car rental app
 
-echo "Starting the installation"
+#This file copies the car rental app from a usb to desktop
+#make directory CarRentalApp
 
-#moving to the desired location
-cd ~/Desktop
-echo "moving to desktop"
-echo $PWD
+mkdir ~/Desktop/CarRentalApp
+echo "Making folder as *CarRentalApp*-desktop"
 
-#Check for correct change directory
-
-#Create App folder
-mkdir RentalCarApp
-cd RentalCarApp
-#Creatae folder for database, and script
-mkdir db
-mkdir scripts
-echo "Structure created successfully"
-
-
-#uninstall option
-
-echo "Would you like to keep program?"
-echo "Y for yes, N for no."
-read choice
-
-if [ $choice == "Y" ]; then
-	echo "Program is installed."
-fi
-
-if [ $choice == "N" ]; then
-	echo "Deleting program"
-	cd ~/Desktop
-	rm -r RentalCarApp
-fi
+#Copy CarRentalApp conttents from usb to Desktop
+cp -r ../ ~/Desktop/CarRentalApp
+echo "copying files to folder"
+echo "Installation complete"
 ```
 
+### Uninstall.sh code
+
+```
+
+
+
+
+
+
+
+
+
+
+
+```
 Evaluation
 -----------
 
