@@ -1,0 +1,21 @@
+Name
+ uninstall.sh
+ Deletes CarRentalApp
+
+Synopsis
+ bash uninstall.sh
+ ""Would you like to uninstall [Y] [N]""
+ *enter Y
+ ""Deleting CarRentalApp""
+
+Description
+ The program will go to desktop and delete the CarRentalApp, users have to input "Y" to uninstall, so they don't accidently delete CarRentalApp
+
+Examples
+ bash uninstall.sh
+ >Y
+ *CarRentalApp deleted
+
+
+Author
+ Shinnosuke Matthew Miyanaga

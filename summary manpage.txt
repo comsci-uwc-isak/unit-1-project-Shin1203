@@ -1,0 +1,27 @@
+Name
+ summary.sh
+ prints summary of database info to user
+
+Synopsis
+ bash summary.sh
+
+Description
+ Program will go into db file, then print out all the files, as well as the   contents in those text files.
+
+Examples
+ bash summary.sh
+
+
+
+"" 
+You have maincarfile.txt zx029.txt 
+Filename- Maincarfile.txt
+zx029 HondaCivic Purple 4
+
+Filename- zx029.txt
+---
+
+""
+
+Author
+ Shinnosuke Matthew Miyanaga

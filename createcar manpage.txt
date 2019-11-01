@@ -1,0 +1,15 @@
+Name
+ createcar.sh
+ Allows user to create new car info in database.
+
+Synopsis
+ bash createcar.sh *plate *model *color *passenger
+
+Description
+ Will take user inputed arguments, making a individual car folder as *plate.txt, as well as storing all 4 arguments in 1 line in the main car folder.
+
+Examples
+ bash createcar.sh Zx902 HondaCivic pink 2
+
+Author
+ Shinnosuke Matthew Miyanaga
