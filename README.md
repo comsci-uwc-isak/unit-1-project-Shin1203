@@ -1,5 +1,9 @@
 ![CarRental](logo.png)
-
+```.py
+Marks=13
+Demo= -
+Total=(Marks+Demo)=13
+```
 Car Rental Minimal App
 ===========================
 
@@ -41,6 +45,19 @@ These are the measurable outcomes
 7. A basic database system is implemented
 8. A basic backup functionality
 
+**Criterion A**
+
+|Level|Descriptor|
+|----|-----|
+|4|The client in the car rental office is identified and his situation is stated. The rationale for choosing the proposed product is partially explained and includes some appropriate criteria for evaluating the success of the product.|
+```.sh
+Rational
+* You can improve this criterion by solving the following questions about the context: Who is the client?
+Why is the product being developed?
+* One more justificaiton for using BASH is that we were learning it. 
+* Research on the internet other features of BASH that makes it a good choice for this system
+```
+
 ### Proposed solution
 I decided on choosing bash as the best program for the solution. This is because the user doesn't want a complicated system, and wants a terminal based program. The use of a computer program to store data will make the data more accessible, safe and easy to input in comparison to the old hand-written system. Some problems with the program is that it is very simple, and the user interface may be confusing due to it being in the terminal, as well as some limitations in functionality. I believe still that a bash program is the best solution, as it provides a simple solution that should not be too complicated to use.
 
@@ -81,6 +98,19 @@ Design
 ###First sketch diagram of system
 ![FirstDiagram](Diagram.png)
 
+
+
+## Criterion B
+|**level**|**Description**|
+|-----|------------|
+|4|An outline test plan is included but limited. A system diagram is included. From this information it is difficult to see how the product was developed.|
+```.sh
+Rationale
+* The system diagram is included but limited descriptions. You will need to improve this part in Unit 2 so that the reader understands clearly the hardware and software components of your solution.
+* You are losing marks in this criterion because your flow diagrams are missing.
+* The test plan is also missing,
+* with the images you need a description. The description is a paragraph that explains the figure and tells the reader why you included the figure: "As seen in Fig. 1. the system proposed for the CarRentalApp consist of ..."
+```
 
 Development
 --------
@@ -310,6 +340,7 @@ To test the rest of the code, I ran them and made sure they worked as intended, 
 Evaluation
 
 
+
 Issues and solutions
 ----
 ### Frame
@@ -351,6 +382,16 @@ echo -n "*"
 
 Throuogh making this app, I have become proficient in using arguments, for loops as well as creating/making/editing files and  maneuvering locations in the desktop through the terminal, as well as becoming very familiar with using bash
 
+## Criterion C
+|**level**|**Description**|
+|-----|------------|
+|2|The proposed solution is characterized by limited use of existing tools. There is no explanation of why the techniques are used or how they are adequate for the task. Sources are used but are not identified.|
+```.sh
+Rationale
+* You did not include any description on the code snippets. You will need to explain what you see and the reason for including the code.
+* Similarly, there is limited evidence for your process during the Unit since you have the code for the scripts without elaborataion.
+```
+
 
 Evaluation
 ----
@@ -376,7 +417,16 @@ The usage of this app is also very simple, code will only take simple inputs to 
 -My summary code doesn't create averages or data out of the information in the database files.
 -Some of my code could be improved to increase effectiveness.
 
-
+## Criterion D
+|**level**|**Description**|
+|-----|------------|
+|3|The product is partially evaluated against the success criteria identified in criterion A. Recommendations for further improvement of the product are largely realistic.
+|
+```.sh
+Rationale
+* You evaluation of the success criteria is limited you are missing marks because you did not elaborate on how the success criteria were met. It is not sufficient to solely add the name of the script.
+* Improvement for the future are reasonable
+```
 
 
 
